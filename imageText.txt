@@ -1,0 +1,17 @@
+Generalization to Non-integer Nodes
+
+Let’s now remove the restriction that the “nodes” xo, 21, Z2, .... be precisely the numbers
+0, 1, 2, etc. We will still require them to be equidistant, however. That is, we'll require that
+In = X + nh for n = 0,1,2,... (so h is the distance between each pair of nodes). Non-
+equidistant nodes can also be dealt with, but we won’t investigate that case in this course.
+To find the appropriate form of the interpolating polynomials, we would repeat the proce-
+dure we used to find formula (30). The calculations are a bit messier, so we won’t go through
+
+them here; instead we’ll just state the result.
+
+The Newton Forward Difference Formula Given n+ 1 equidistant nodes zo, tn =
+
+xo + nh, the n'-order polynomial passing through all of them is given by
+
+92
+
