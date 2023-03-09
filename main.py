@@ -27,10 +27,10 @@ def drawBoxes(img):
         cv.rectangle(image, (x, y), (x + w, y + h), (36,255,12), 2)
     displayImages([image])
 
-#image = cv.imread('./johnTest.jpeg')
-#image = cv.imread('./test.jpg')
-#image = cv.imread('./stocks.jpeg')
-image = cv.imread('./ECETB.png')
+#image = cv.imread('./testingImages/johnTest.jpeg')
+#image = cv.imread('./testingImages/test.jpg')
+#image = cv.imread('./testingImages/stocks.jpeg')
+image = cv.imread('./testingImages/ECETB.png')
 
 
 gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
