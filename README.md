@@ -9,7 +9,6 @@ The vertical line and horizontal line maps are then combined to form a grid map,
 <p float="left">
   <img src="https://github.com/JwuCode/documentReader/blob/main/img_final_bin.jpg?raw=true" width="300" height="300">
   <img src="https://github.com/JwuCode/documentReader/blob/main/result.png?raw=true" width="300"  height="300" /> 
-  <img src="/img3.png" width="300" />
 </p>
 
 After (img_final_bin.jpg) is created, contour mapping is performed to find the boxes which need to be scanned by the Tesseract model. The mapped boxes are shown in (result.png). After each box is scanned, the text and key information is stored in imageText.txt, which is then converted to an MP3 file using Google-text-to-speech (gtts).
