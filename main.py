@@ -30,11 +30,11 @@ def textAudio():
 
 
 def drawBoxes(img):
-    #Converts input to grayscale image, then applies nonlocal means algo to remove noise
+    #Converts input to grayscale image, then applies thresholding to convert to binary image
     image = img
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
     thresh = cv.threshold(gray, 0, 255, cv.THRESH_BINARY_INV + cv.THRESH_OTSU)[1]
-    #nldenoise = cv.fastNlMeansDenoising(gray, None, 20, 7, 21) 
+    #nldenoise = cv.fastNlMeansDenoising(gray, None, 20, 7, 21) <- not using at the moment
     kernel = cv.getStructuringElement(cv.MORPH_RECT, (5,5))
     dilate = cv.dilate(thresh, kernel, iterations=5)
     cnts = cv.findContours(dilate, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
@@ -77,24 +77,16 @@ def boxcraProcessing(image):
     temp = image
     gray = cv.cvtColor(temp,cv.COLOR_BGR2GRAY)
     thresh = cv.threshold(gray, 0, 255, cv.THRESH_BINARY_INV + cv.THRESH_OTSU)[1]
-    # Defining a kernel length
-    # A verticle kernel of (1 X kernel_length), which will detect all the verticle lines from the image.
     verti_kernel = cv.getStructuringElement(cv.MORPH_RECT, (1, 8))
-    # A horizontal kernel of (kernel_length X 1), which will help to detect all the horizontal line from the image.
     hori_kernel = cv.getStructuringElement(cv.MORPH_RECT, (15, 1))
-    # A kernel of (3 X 3) ones.
     replacement_verti = cv.getStructuringElement(cv.MORPH_RECT, (1, 9))
     replacement_hori = cv.getStructuringElement(cv.MORPH_RECT, (16, 1))
-    # Morphological operation to detect vertical lines from an image
     img_temp1 = cv.erode(thresh, verti_kernel, iterations=3)
     vertical_lines_img = cv.dilate(img_temp1, replacement_verti, iterations=3)
     cv.imwrite("vertical_lines.jpg",vertical_lines_img)
-    # Morphological operation to detect horizontal lines from an image
     img_temp2 = cv.erode(thresh, hori_kernel, iterations=3)
     horizontal_lines_img = cv.dilate(img_temp2, replacement_hori, iterations=3)
     cv.imwrite("horizontal_lines.jpg",horizontal_lines_img)
-
-    # Weighting parameters, this will decide the quantity of an image to be added to make a new image.
     alpha = 0.5
     beta = 1.0 - alpha
     # Combine images
@@ -103,7 +95,7 @@ def boxcraProcessing(image):
     contours = cv.findContours(img_final_bin, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
     contours = contours[0] if len(contours) == 2 else contours[1]
     contours = sort_contours(contours, method="top-to-bottom")
-    tFile = open("FinalimageText.txt", "w")
+    tFile = open("imageText.txt", "w")
     img_final_bin = cv2.cvtColor(img_final_bin,cv2.COLOR_GRAY2RGB)
 
     for c in range(len(contours)):
@@ -111,8 +103,6 @@ def boxcraProcessing(image):
         #cv.rectangle(temp, (x, y), (x + w, y + h), (36,255,12), 2)  <-- use this to draw rectangles to visualize ROI
         cropped_image = temp[y:y+h, x:x+w]
         sectionText = pytesseract.image_to_string(cropped_image)
-        print(sectionText)
-        print("SEPARATOR---------------------------")
         if (sectionText.find('/') != -1) and dateFound == False:
             tFile.write("Year/Annee: "+ sectionText[sectionText.find('/') - 2: sectionText.find('/') + 8]+ "\n")
             dateFound = True
@@ -263,7 +253,7 @@ def boxcraProcessing(image):
             tFile.write("\n")
 
     tFile.close()  
-    cv.imwrite('newresult.png', temp)
+    cv.imwrite('result.png', temp)
 
 def checkFile(filePath):
     if filePath.lower().endswith(('.pdf')):
@@ -280,29 +270,11 @@ def checkFile(filePath):
     else: 
         return filePath
 
-
-#Driver Code
-def readFile():
-#TESTING
-    #image = cv.imread('./testingImages/johnTest.jpeg')
-    #image = cv.imread('./testingImages/test.jpg')
-    #image = cv.imread('./testingImages/stocks.jpeg')
-    #image = cv.imread('./testingImages/ECETB.png')
-    #image = cv.imread('./testingImages/cra.png')
-    image = cv.imread('./PDFoutput/page0.jpg')
-    #checkFile('./testingPDF/t5-22b.pdf')
-
-    gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
-
-    #dst = cv.GaussianBlur(image,(5,5),0)
-    #image=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
-    #dst = cv.fastNlMeansDenoisingColored(image,None,10,10,7,21)
-    #craTest = craProcessing(image)
-    #text = pytesseract.image_to_string(craTest)
-    #createFile(text)
-    #cv.imwrite('result.png', craTest)
-    #drawBoxes(craTest)
-    boxcraProcessing(image)
-
 #driver code
+def readFile():
+    checkFile('./testingPDF/t5-22b.pdf')
+    image = cv.imread('./PDFoutput/page0.jpg')
+    boxcraProcessing(image)
+    textAudio()
+
 readFile()
