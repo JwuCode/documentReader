@@ -10,7 +10,7 @@ from sort_funct import *
 import re
 
 
-#use the regex date pattern for template matching
+#use the regex date pattern for date template matching
 date_pattern = '/(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.]((?:19|20)\d\d)/'
 
 #helper functions
@@ -21,9 +21,9 @@ def displayImages(images):
 
 def textAudio():
     try:
-        textToRead = open("imageText.txt", "r")
-        readResult = gtts.gTTS(textToRead)
-        readResult.save("scannedFile.mp3")
+        textToRead = open("imageText.txt", "r").read().replace("\n", " ")
+        speech = gtts.gTTS(text = str(textToRead),lang='en',slow = False)
+        speech.save("scannedFile.mp3")
         #playsound("hello.mp3")
     except:
         print("No File Read")
@@ -75,6 +75,7 @@ def craProcessing(image):
 def boxcraProcessing(image):
     dateFound = False
     temp = image
+    boxver = image
     gray = cv.cvtColor(temp,cv.COLOR_BGR2GRAY)
     thresh = cv.threshold(gray, 0, 255, cv.THRESH_BINARY_INV + cv.THRESH_OTSU)[1]
     verti_kernel = cv.getStructuringElement(cv.MORPH_RECT, (1, 8))
@@ -100,7 +101,9 @@ def boxcraProcessing(image):
 
     for c in range(len(contours)):
         x,y,w,h = cv.boundingRect(contours[c])
-        #cv.rectangle(temp, (x, y), (x + w, y + h), (36,255,12), 2)  <-- use this to draw rectangles to visualize ROI
+
+        #used cv rectangle to draw rectangles around scanned areas
+        cv.rectangle(boxver, (x, y), (x + w, y + h), (36,255,12), 2)  
         cropped_image = temp[y:y+h, x:x+w]
         sectionText = pytesseract.image_to_string(cropped_image)
         if (sectionText.find('/') != -1) and dateFound == False:
@@ -253,7 +256,7 @@ def boxcraProcessing(image):
             tFile.write("\n")
 
     tFile.close()  
-    cv.imwrite('result.png', temp)
+    cv.imwrite('result.png', boxver)
 
 def checkFile(filePath):
     if filePath.lower().endswith(('.pdf')):
