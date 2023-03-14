@@ -14,7 +14,6 @@ import re
 date_pattern = '/(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.]((?:19|20)\d\d)/'
 
 #helper functions
-
 def displayImages(images):
     for i in range(len(images)):
         plt.subplot(121 + i),plt.imshow(images[i])
@@ -36,9 +35,6 @@ def drawBoxes(img):
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
     thresh = cv.threshold(gray, 0, 255, cv.THRESH_BINARY_INV + cv.THRESH_OTSU)[1]
     #nldenoise = cv.fastNlMeansDenoising(gray, None, 20, 7, 21) 
-
-
-    #REMEMBER TO CHANGE KERNEL SIZE BACK TO 7, 9
     kernel = cv.getStructuringElement(cv.MORPH_RECT, (5,5))
     dilate = cv.dilate(thresh, kernel, iterations=5)
     cnts = cv.findContours(dilate, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
@@ -46,8 +42,6 @@ def drawBoxes(img):
     for c in cnts:
         x,y,w,h = cv.boundingRect(c)
         cropped_image = image[y:y+h, x:x+w]
-        #print(str(x) + " "+ str(y) +" "+ str(w) +" "+ str(h))
-        #displayImages([cropped_image])
         print(pytesseract.image_to_string(cropped_image))
         cv.rectangle(image, (x, y), (x + w, y + h), (36,255,12), 2)
     displayImages([image, dilate])
@@ -103,7 +97,7 @@ def boxcraProcessing(image):
     # Weighting parameters, this will decide the quantity of an image to be added to make a new image.
     alpha = 0.5
     beta = 1.0 - alpha
-    # This function helps to add two image with specific weight parameter to get a third image as summation of two image.
+    # Combine images
     img_final_bin = cv.addWeighted(vertical_lines_img, alpha, horizontal_lines_img, beta, 0.0)
     cv.imwrite("img_final_bin.jpg",img_final_bin)
     contours = cv.findContours(img_final_bin, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
@@ -114,7 +108,7 @@ def boxcraProcessing(image):
 
     for c in range(len(contours)):
         x,y,w,h = cv.boundingRect(contours[c])
-        #cv.rectangle(temp, (x, y), (x + w, y + h), (36,255,12), 2)
+        #cv.rectangle(temp, (x, y), (x + w, y + h), (36,255,12), 2)  <-- use this to draw rectangles to visualize ROI
         cropped_image = temp[y:y+h, x:x+w]
         sectionText = pytesseract.image_to_string(cropped_image)
         print(sectionText)
@@ -268,16 +262,8 @@ def boxcraProcessing(image):
             tFile.write("Recipient account number / Numéro de compte du bénéficiaire: "+ boxText + '\n')
             tFile.write("\n")
 
-
-        #tFile.write(pytesseract.image_to_string(cropped_image))
     tFile.close()  
     cv.imwrite('newresult.png', temp)
-
-
-
-
-
-    
 
 def checkFile(filePath):
     if filePath.lower().endswith(('.pdf')):
@@ -294,6 +280,8 @@ def checkFile(filePath):
     else: 
         return filePath
 
+
+#Driver Code
 def readFile():
 #TESTING
     #image = cv.imread('./testingImages/johnTest.jpeg')
