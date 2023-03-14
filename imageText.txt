@@ -1,17 +1,442 @@
-Generalization to Non-integer Nodes
+12/24/2000
+Dividends from Canadian corporations — Dividendes de sociétés canadiennes
 
-Let’s now remove the restriction that the “nodes” xo, 21, Z2, .... be precisely the numbers
-0, 1, 2, etc. We will still require them to be equidistant, however. That is, we'll require that
-In = X + nh for n = 0,1,2,... (so h is the distance between each pair of nodes). Non-
-equidistant nodes can also be dealt with, but we won’t investigate that case in this course.
-To find the appropriate form of the interpolating polynomials, we would repeat the proce-
-dure we used to find formula (30). The calculations are a bit messier, so we won’t go through
+Federal credit ~ Crédit federal
 
-them here; instead we’ll just state the result.
+Annee
 
-The Newton Forward Difference Formula Given n+ 1 equidistant nodes zo, tn =
+‘Actual amount of eligible dividends
 
-xo + nh, the n'-order polynomial passing through all of them is given by
+$40,000
 
-92
+Montant réel des dividendes déterminés
+
+25
+
+Taxable amount of eligible dividends
+
+$40,000
+
+Montant imposable des dividendes
+détermines
+
+Dividend tax credit for eligible
+dividends
+
+26
+
+$40,000
+
+Crédit dimpét pour dividendes déterminés
+
+13
+
+Interest from Canadian sources
+
+$40,000
+
+Intéréts de source canadienne
+
+18
+
+Capital gains dividends
+$40,000
+
+Dividendes sur gains en capital
+
+‘Actual amount of dividends
+other than eligible dividends
+
+$40,000
+
+Montant réel des dividendes
+autres que des dividendes determines
+
+Taxable amount of dividends
+other than eligible dividends
+
+$40,000
+
+Montant imposable des dividendes
+autres que des dividendes déterminés
+
+1
+
+Dividend tax credit for dividends
+
+12] “other than eligible dividends
+
+$40,000
+
+Crédit dimpét pour dividendes
+autres que des dividendes déterminés
+
+21
+
+Report Code
+
+22
+
+Recipient identification number
+
+ABC123
+Code du feuillet
+
+176342
+
+Numéro d'identification du bénéficiaire
+
+23
+
+Recipient type
+
+yes
+Type de bénéficiaire
+
+Other information
+
+(see the back)
+Autres renseignements
+
+12 At least 4
+
+(lisez le dos)
+
+Box /Case
+
+Amount / Montant
+
+Box / Case
+
+Amount / Montant
+
+Box / Case
+
+Amount / Montant
+
+26
+
+Dividend tax credit for eligible
+dividends
+
+$40,000
+
+Crédit dimpét pour dividendes déterminés
+
+21| Report Code
+
+22
+
+Recipient identification number
+
+ABC123
+Code du feuillet
+
+176342
+
+Numéro d'identification du bénéficiaire
+
+23| Recipient type
+
+yes
+Type de bénéficiaire
+
+12| ‘PNidend tax creck for cividencs:
+other than eligible dividends
+
+$40,000
+
+Crédit dimpét pour dividendes
+autres que des dividendes déterminés
+
+1
+
+Taxable amount of dividends
+other than eligible dividends
+
+$40,000
+Montant imposable des dividendes
+autres que des dividendes déterminés
+
+At least 4
+Recipient's name (last name first) and address — Nom, prénom et adresse du bénéficiaire
+
+Payer's name and address — Nom et adresse du payeur
+
+Mcdonald, Bill
+
+3341 Realstreet Avenue
+
+James, Joe
+
+1231 Realstreet Street
+
+James, Joe
+
+1231 Realstreet Street
+
+12342345
+Bus? | don’t know
+USD
+Dividends from Canadian corporations — Dividendes de sociétés canadiennes
+
+Federal credit — Crédit fédéral
+
+Annee
+
+‘Actual amount of eligible dividends
+
+Montant réel des dividendes déterminés
+
+25
+
+Taxable amount of eligible dividends
+
+Montant imposable des dividendes
+détermines
+
+Dividend tax credit for eligible
+dividends
+
+26
+
+Crédit dimpét pour dividendes déterminés
+
+13
+
+Interest from Canadian sources
+
+Intéréts de source canadienne
+
+18
+
+Capital gains dividends
+
+Dividendes sur gains en capital
+
+‘Actual amount of dividends
+other than eligible dividends
+
+Montant réel des dividendes
+autres que des dividendes determines
+
+1H Taxable amount of dividends
+other than eligible dividends
+
+Montant imposable des dividendes
+autres que des dividendes determines
+
+Dividend tax credit for dividends
+
+12] “other than eligible dividends
+
+Crédit dimpét pour dividendes
+autres que des dividendes determines
+
+21
+
+22
+
+Report Code
+
+Code du feuillet
+
+Recipient identification number
+
+Numéro d'identification du bénéficiaire
+
+23
+
+Recipient type
+
+‘Type de bénéficiaire
+
+Other information
+
+(see the back)
+Autres renseignements
+
+(lisez le dos)
+
+Box /Case
+
+Amount / Montant
+
+Box / Case
+
+Amount / Montant
+
+Box / Case
+
+Amount / Montant
+
+26
+
+Dividend tax credit for eligible
+dividends
+
+Crédit dimpét pour dividendes déterminés
+
+21] Report Code
+
+22
+
+Recipient identification number
+
+Code du feuillet
+
+Numéro d'identification du bénéficiaire
+
+23 | Recipient type
+
+‘Type de bénéficiaire
+
+4p| ‘Drvicand tex crack tor cividancs:
+other than eligible dividends
+
+Crédit dimpét pour dividendes
+autres que des dividendes déterminés
+
+W
+
+Taxable amount of dividends
+other than eligible dividends
+
+Montant imposable des dividendes
+autres que des dividendes déterminés
+
+Recipient's name (last name first) and address — Nom, prénom et adresse du bénéficiaire
+
+Payer's name and address — Nom et adresse du payeur
+
+Dividends from Canadian corporations — Dividendes de sociétés canadiennes
+
+Federal credit — Crédit fédéral
+
+Annee
+
+‘Actual amount of eligible dividends
+
+Montant réel des dividendes déterminés
+
+25
+
+Taxable amount of eligible dividends
+
+Montant imposable des dividendes
+détermines
+
+Dividend tax credit for eligible
+dividends
+
+26
+
+Crédit dimpét pour dividendes déterminés
+
+13
+
+Interest from Canadian sources
+
+Intéréts de source canadienne
+
+18
+
+Capital gains dividends
+
+Dividendes sur gains en capital
+
+‘Actual amount of dividends
+other than eligible dividends
+
+Montant réel des dividendes
+autres que des dividendes determines
+
+1H Taxable amount of dividends
+other than eligible dividends
+
+Montant imposable des dividendes
+autres que des dividendes determines
+
+Dividend tax credit for dividends
+
+12] “other than eligible dividends
+
+Crédit dimpét pour dividendes
+autres que des dividendes déterminés
+
+21
+
+22
+
+Report Code
+
+Code du feuillet
+
+Recipient identification number
+
+Numéro d'identification du bénéficiaire
+
+23
+
+Recipient type
+
+‘Type de bénéficiaire
+
+Other information
+
+(see the back)
+Autres renseignements
+
+(lisez le dos)
+
+Box /Case
+
+Amount / Montant
+
+Box / Case
+
+Amount / Montant
+
+Box / Case
+
+Amount / Montant
+
+26
+
+Dividend tax credit for eligible
+dividends
+
+Crédit dimpét pour dividendes déterminés
+
+21] Report Code
+
+22
+
+Recipient identification number
+
+Code du feuillet
+
+Numéro d'identification du bénéficiaire
+
+23 | Recipient type
+
+‘Type de bénéficiaire
+
+4p| ‘Drvicand tex crack tor cividancs:
+other than eligible dividends
+
+Crédit dimpét pour dividendes
+autres que des dividendes déterminés
+
+W
+
+Taxable amount of dividends
+other than eligible dividends
+
+Montant imposable des dividendes
+autres que des dividendes déterminés
+
+Recipient's name (last name first) and address — Nom, prénom et adresse du bénéficiaire
+
+Payer's name and address — Nom et adresse du payeur
 
