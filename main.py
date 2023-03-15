@@ -161,12 +161,13 @@ def boxcraProcessing(image):
             tFile.write("Actual amount of dividends other than eligible dividends / Montant réel des dividendes autres que des dividendes déterminés: "+ sectionText + '\n')
         
         if ('Taxable amount of dividends' in sectionText) and ('Année' not in sectionText) and ('other than eligible dividends' in sectionText):
-            sectionText = sectionText.replace('1', '', 1)
             sectionText = sectionText.replace('\n', '')
             sectionText = sectionText.replace(' ', '')
             sectionText = sectionText.replace('W', '')
+            print(sectionText)
             sectionText = sectionText.replace('Taxableamountofdividendsotherthaneligibledividends', '')
             sectionText = sectionText.replace('Montantimposabledesdividendesautresquedesdividendesdéterminés', '')
+            sectionText = sectionText.replace('1$', '$')
             tFile.write("Taxable amount of dividends other than eligible dividends / Montant imposable des dividendes autres que des dividendes déterminés: "+ sectionText + '\n')
 
         if ('Crédit dimpét pour dividendes' in sectionText) and ('Année' not in sectionText) and ('autres que des dividendes déterminés' in sectionText):

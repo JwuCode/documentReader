@@ -31,7 +31,7 @@ Recipient Type / Type de bénéficiaire:
 Recipient identification number / Numéro d'identification du bénéficiaire: 
 Report Code / Code du Feuillet: 
 Dividend tax credit for dividends other than eligible dividends / Crédit dimpét pour dividendes autres que des dividendes déterminés: 
-Taxable amount of dividends other than eligible dividends / Montant imposable des dividendes autres que des dividendes déterminés: agazilliondollars
+Taxable amount of dividends other than eligible dividends / Montant imposable des dividendes autres que des dividendes déterminés: $12910
 Actual amount of dividends other than eligible dividends / Montant réel des dividendes autres que des dividendes déterminés: 
 Box / Case: CR
 Amount / Montant: Gold Chest
