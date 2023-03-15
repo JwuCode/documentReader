@@ -164,7 +164,6 @@ def boxcraProcessing(image):
             sectionText = sectionText.replace('\n', '')
             sectionText = sectionText.replace(' ', '')
             sectionText = sectionText.replace('W', '')
-            print(sectionText)
             sectionText = sectionText.replace('Taxableamountofdividendsotherthaneligibledividends', '')
             sectionText = sectionText.replace('Montantimposabledesdividendesautresquedesdividendesdéterminés', '')
             sectionText = sectionText.replace('1$', '$')
