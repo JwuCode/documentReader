@@ -1,21 +1,21 @@
 Year/Annee: 12/24/2000
-Capital gains dividends / Dividendes sur gains en capital: $40,000
-Interest from Canadian sources / Intéréts de Source Canadienne: $40,000
-Dividend tax credit for eligible dividends / Crédit dimpét pour dividendes déterminés: $40,000
-Taxable amount of eligible dividends / Montant imposable des dividendes déterminés: $40,000
+Capital gains dividends / Dividendes sur gains en capital: $19231
+Interest from Canadian sources / Intéréts de Source Canadienne: $20390
+Dividend tax credit for eligible dividends / Crédit dimpét pour dividendes déterminés: $40,111
+Taxable amount of eligible dividends / Montant imposable des dividendes déterminés: $50,000
 Actual amount of eligible dividends / Montant réel des dividendes déterminés: $40,000
 Recipient Type / Type de bénéficiaire: yes
 Recipient identification number / Numéro d'identification du bénéficiaire: 176342
 Report Code / Code du Feuillet: ABC123
-Dividend tax credit for dividends other than eligible dividends / Crédit dimpét pour dividendes autres que des dividendes déterminés: 12)‘vigendtaxcreckforcvicencs,otherthaneligibledividends$40,000
-Taxable amount of dividends other than eligible dividends / Montant imposable des dividendes autres que des dividendes déterminés: $40,000
-Actual amount of dividends other than eligible dividends / Montant réel des dividendes autres que des dividendes déterminés: $40,000
+Dividend tax credit for dividends other than eligible dividends / Crédit dimpét pour dividendes autres que des dividendes déterminés: $12345
+Taxable amount of dividends other than eligible dividends / Montant imposable des dividendes autres que des dividendes déterminés: $3982
+Actual amount of dividends other than eligible dividends / Montant réel des dividendes autres que des dividendes déterminés: $39819
 Box / Case: 12
 Amount / Montant: At least 4
-Box / Case: 
-Amount / Montant: 
-Box / Case: 
-Amount / Montant: 
+Box / Case: 20
+Amount / Montant: 5 morbillion
+Box / Case: 30
+Amount / Montant: 230.
 Recipient's name (last name first) and address / Nom, prénom et adresse du bénéficiaire: Mcdonald, Bill  3341 Realstreet Avenue
 Payer's name and address / Nom et adresse du payeur: James, Joe  1231 Realstreet Street
 Foreign Currency / Devises étrangères: USD
@@ -30,11 +30,11 @@ Actual amount of eligible dividends / Montant réel des dividendes déterminés:
 Recipient Type / Type de bénéficiaire: 
 Recipient identification number / Numéro d'identification du bénéficiaire: 
 Report Code / Code du Feuillet: 
-Dividend tax credit for dividends other than eligible dividends / Crédit dimpét pour dividendes autres que des dividendes déterminés: 4D|‘Crvicandtexcracktoraivicancs:otherthaneligibledividends
-Taxable amount of dividends other than eligible dividends / Montant imposable des dividendes autres que des dividendes déterminés: 
+Dividend tax credit for dividends other than eligible dividends / Crédit dimpét pour dividendes autres que des dividendes déterminés: 
+Taxable amount of dividends other than eligible dividends / Montant imposable des dividendes autres que des dividendes déterminés: agazilliondollars
 Actual amount of dividends other than eligible dividends / Montant réel des dividendes autres que des dividendes déterminés: 
-Box / Case: 
-Amount / Montant: 
+Box / Case: CR
+Amount / Montant: Gold Chest
 Box / Case: 
 Amount / Montant: 
 Box / Case: 
@@ -53,7 +53,7 @@ Actual amount of eligible dividends / Montant réel des dividendes déterminés:
 Recipient Type / Type de bénéficiaire: 
 Recipient identification number / Numéro d'identification du bénéficiaire: 
 Report Code / Code du Feuillet: 
-Dividend tax credit for dividends other than eligible dividends / Crédit dimpét pour dividendes autres que des dividendes déterminés: 4D|‘Crvicandtexcracktoraivicancs:otherthaneligibledividends
+Dividend tax credit for dividends other than eligible dividends / Crédit dimpét pour dividendes autres que des dividendes déterminés: 
 Taxable amount of dividends other than eligible dividends / Montant imposable des dividendes autres que des dividendes déterminés: 
 Actual amount of dividends other than eligible dividends / Montant réel des dividendes autres que des dividendes déterminés: 
 Box / Case: 

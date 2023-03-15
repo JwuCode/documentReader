@@ -177,6 +177,9 @@ def boxcraProcessing(image):
             sectionText = sectionText.replace('4p|‘Drvicandtexcracktorcividancs:otherthaneligibledividends', '')
             sectionText = sectionText.replace('12|‘PNidendtaxcreckforcividencs:otherthaneligibledividends', '')
             sectionText = sectionText.replace('Créditdimpétpourdividendesautresquedesdividendesdéterminés', '')
+            sectionText = sectionText.replace('12)‘vigendtaxcreckforcvicencs,otherthaneligibledividends', '')
+            sectionText = sectionText.replace('4D|‘Crvicandtexcracktoraivicancs:otherthaneligibledividends', '')
+            
             tFile.write("Dividend tax credit for dividends other than eligible dividends / Crédit dimpét pour dividendes autres que des dividendes déterminés: "+ sectionText + '\n')
         
         if ('Report Code' in sectionText) and ('Année' not in sectionText):
